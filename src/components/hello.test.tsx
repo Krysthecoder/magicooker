@@ -8,6 +8,6 @@ it('renders "Hello world"', () => {
 });
 
 it('renders "Mr Alvison"', () => {
-  render(<Hello title="Mr Alvison" />);
-  expect(screen.getByText('Mr Alvison')).toBeInTheDocument();
+  render(<Hello title="Mr Alvison," />);
+  expect(screen.getByText('Mr Alvison,')).toBeInTheDocument();
 });
