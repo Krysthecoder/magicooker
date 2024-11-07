@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import Hello from './hello';
+import Hello from './Hello';
 
 it('renders "Hello world"', () => {
   render(<Hello title="Hello world" />);
-  const testText = screen.getByText(/Hello world/i);
+  const testText = screen.getByText('Hello world');
   expect(testText).toBeInTheDocument();
 });
 
