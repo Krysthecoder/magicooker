@@ -1,12 +1,19 @@
-import { IMyButtonProps } from './types';
+import { MyButtonProps } from './types';
 
-const MyButton: React.FC<IMyButtonProps> = ({
+const MyButton: React.FC<MyButtonProps> = ({
   onClick,
   children,
-  disabled
+  disabled,
+  className,
+  ...rest
 }) => {
   return (
-    <button onClick={onClick} disabled={disabled}>
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={className}
+      {...rest}
+    >
       {children}
     </button>
   );

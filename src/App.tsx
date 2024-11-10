@@ -1,10 +1,10 @@
 import './App.css';
-import Hello from './components/Hello';
+import Home from './components/Home';
 
 function App() {
   return (
     <>
-      <Hello title="Holiwis, como estan" />
+      <Home title="Holiwis, como estan" />
     </>
   );
 }
