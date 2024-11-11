@@ -1,11 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import Home from './Home';
 
-describe('Hello Component', () => {
+describe('Home Component', () => {
   it('renders with title << Hello world >>', () => {
     render(<Home title="Hello world" />);
-    const testText = screen.getByText('Hello world');
-    expect(testText).toBeInTheDocument();
+    expect(screen.getByText('Hello world')).toBeInTheDocument();
   });
 
   it('renders with title << MagiCooker Recipes >>', () => {
