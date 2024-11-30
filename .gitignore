@@ -26,3 +26,4 @@ dist-ssr
 
 # enviromental variable
 .env
+*storybook.log
