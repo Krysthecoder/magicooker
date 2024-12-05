@@ -8,3 +8,10 @@ export interface MyButtonProps
 export interface HomeProps {
   title: string | undefined;
 }
+
+export type LoginTextFieldProps = {
+  id: string;
+  label: string;
+  variant: string;
+  type: string;
+};
