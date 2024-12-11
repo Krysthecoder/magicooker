@@ -10,6 +10,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import LoginIcon from '@mui/icons-material/Login';
 
+
 const LandingPage = () => {
   const navigate = useNavigate();
 
@@ -32,10 +33,10 @@ const LandingPage = () => {
       </Typography>
       <Grid container spacing={2}>
         {[
-          { title: 'Shrimp & Grits', description: 'Ready in 30 minutes', img: 'recipe1.png' },
-          { title: 'Mushroom Stroganoff', description: 'Easy vegetarian dinner', img: 'recipe2.png' },
-          { title: 'Vegan Bolognese', description: 'Hearty Italian classic', img: 'recipe3.png' },
-          { title: 'Pork Tenderloin', description: 'Weeknight comfort food', img: 'recipe4.png' },
+          { title: 'Shrimp & Grits', description: 'Ready in 30 minutes', img: 'Shrimp_&_Grits.jpg' },
+          { title: 'Mushroom Stroganoff', description: 'Easy vegetarian dinner', img: 'Mushroom_Stroganoff.jpg' },
+          { title: 'Vegan Bolognese', description: 'Hearty Italian classic', img: 'Vegan_Bolognese.jpg' },
+          { title: 'Pork Tenderloin', description: 'Weeknight comfort food', img: 'Pork_Tenderloin.jpg' },
         ].map((recipe, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
             <Card>
