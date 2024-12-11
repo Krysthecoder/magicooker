@@ -8,6 +8,7 @@ import {
   Grid,
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import LoginIcon from '@mui/icons-material/Login';
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const LandingPage = () => {
           Offer expires soon. Get started now!
         </Typography>
         <Button variant="contained" color="primary" onClick={() => navigate('/login')}>
-          Get Started
+          <LoginIcon /> Login
         </Button>
       </Box>
 
@@ -56,9 +57,6 @@ const LandingPage = () => {
           <Typography>5M+ App Downloads</Typography>
           <Typography>10M+ Social Followers</Typography>
         </Box>
-        <Button variant="contained" color="secondary">
-          Join HomeChef
-        </Button>
       </Box>
     </Box>
   );
