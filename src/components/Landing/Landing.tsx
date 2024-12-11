@@ -19,6 +19,29 @@ import {
 const LandingPage = () => {
   const navigate = useNavigate();
 
+const recipes = [
+          {
+            title: "Shrimp & Grits",
+            description: "Ready in 30 minutes",
+            img: "Shrimp_&_Grits.jpg",
+          },
+          {
+            title: "Mushroom Stroganoff",
+            description: "Easy vegetarian dinner",
+            img: "Mushroom_Stroganoff.jpg",
+          },
+          {
+            title: "Vegan Bolognese",
+            description: "Hearty Italian classic",
+            img: "Vegan_Bolognese.jpg",
+          },
+          {
+            title: "Pork Tenderloin",
+            description: "Weeknight comfort food",
+            img: "Pork_Tenderloin.jpg",
+          },
+        ]
+
   return (
     <Box sx={{ textAlign: "center", padding: 4 }}>
       <Box sx={{ marginBottom: 4 }}>
@@ -41,39 +64,18 @@ const LandingPage = () => {
         Recipes for any occasion
       </Typography>
       <Grid container spacing={2}>
-        {[
-          {
-            title: "Shrimp & Grits",
-            description: "Ready in 30 minutes",
-            img: "Shrimp_&_Grits.jpg",
-          },
-          {
-            title: "Mushroom Stroganoff",
-            description: "Easy vegetarian dinner",
-            img: "Mushroom_Stroganoff.jpg",
-          },
-          {
-            title: "Vegan Bolognese",
-            description: "Hearty Italian classic",
-            img: "Vegan_Bolognese.jpg",
-          },
-          {
-            title: "Pork Tenderloin",
-            description: "Weeknight comfort food",
-            img: "Pork_Tenderloin.jpg",
-          },
-        ].map((recipe, index) => (
+        {recipes.map(({ title, img, description }, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
             <Card>
               <CardMedia
                 component="img"
                 height="140"
-                image={`/images/${recipe.img}`}
-                alt={recipe.title}
+                image={`/images/${img}`}
+                alt={title}
               />
               <CardContent>
-                <Typography variant="h6">{recipe.title}</Typography>
-                <Typography variant="body2">{recipe.description}</Typography>
+                <Typography variant="h6">{title}</Typography>
+                <Typography variant="body2">{description}</Typography>
               </CardContent>
             </Card>
           </Grid>
