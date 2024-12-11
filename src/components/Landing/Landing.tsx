@@ -19,28 +19,35 @@ import {
 const LandingPage = () => {
   const navigate = useNavigate();
 
-const recipes = [
-          {
-            title: "Shrimp & Grits",
-            description: "Ready in 30 minutes",
-            img: "Shrimp_&_Grits.jpg",
-          },
-          {
-            title: "Mushroom Stroganoff",
-            description: "Easy vegetarian dinner",
-            img: "Mushroom_Stroganoff.jpg",
-          },
-          {
-            title: "Vegan Bolognese",
-            description: "Hearty Italian classic",
-            img: "Vegan_Bolognese.jpg",
-          },
-          {
-            title: "Pork Tenderloin",
-            description: "Weeknight comfort food",
-            img: "Pork_Tenderloin.jpg",
-          },
-        ]
+  const recipes = [
+    {
+      title: "Shrimp & Grits",
+      description: "Ready in 30 minutes",
+      img: "Shrimp_&_Grits.jpg",
+    },
+    {
+      title: "Mushroom Stroganoff",
+      description: "Easy vegetarian dinner",
+      img: "Mushroom_Stroganoff.jpg",
+    },
+    {
+      title: "Vegan Bolognese",
+      description: "Hearty Italian classic",
+      img: "Vegan_Bolognese.jpg",
+    },
+    {
+      title: "Pork Tenderloin",
+      description: "Weeknight comfort food",
+      img: "Pork_Tenderloin.jpg",
+    },
+  ];
+
+  const stats = [
+    { Icon: StarHalfIcon, label: "4.6 Average Rating" },
+    { Icon: RestaurantIcon, label: "15M Meals Served" },
+    { Icon: GetAppIcon, label: "5M+ App Downloads" },
+    { Icon: ShareIcon, label: "10M+ Social Followers" },
+  ];
 
   return (
     <Box sx={{ textAlign: "center", padding: 4 }}>
@@ -63,6 +70,7 @@ const recipes = [
       <Typography variant="h4" sx={{ marginY: 4 }}>
         Recipes for any occasion
       </Typography>
+
       <Grid container spacing={2}>
         {recipes.map(({ title, img, description }, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
@@ -87,18 +95,15 @@ const recipes = [
         <Box
           sx={{ display: "flex", justifyContent: "space-around", marginY: 2 }}
         >
-          <Typography>
-            <StarHalfIcon sx={{ marginRight: 1 }} /> 4.6 Average Rating
-          </Typography>
-          <Typography>
-            <RestaurantIcon sx={{ marginRight: 1 }} /> 15M Meals Served
-          </Typography>
-          <Typography>
-            <GetAppIcon sx={{ marginRight: 1 }} /> 5M+ App Downloads
-          </Typography>
-          <Typography>
-            <ShareIcon sx={{ marginRight: 1 }} /> 10M+ Social Followers
-          </Typography>
+          <Grid container spacing={2} justifyContent="center">
+            {stats.map(({ Icon, label }, index) => (
+              <Grid item xs={12} sm={6} md={3} key={index} sx={{ display: "flex", justifyContent: "center" }}>
+                <Typography sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>
+                  <Icon sx={{ marginRight: 1 }} /> {label}
+                </Typography>
+              </Grid>
+            ))}
+          </Grid>
         </Box>
       </Box>
     </Box>
