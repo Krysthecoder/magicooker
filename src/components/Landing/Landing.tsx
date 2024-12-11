@@ -8,11 +8,13 @@ import {
   Grid,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import LoginIcon from "@mui/icons-material/Login";
-import StarHalfIcon from "@mui/icons-material/StarHalf";
-import RestaurantIcon from "@mui/icons-material/Restaurant";
-import GetAppIcon from "@mui/icons-material/GetApp";
-import ShareIcon from "@mui/icons-material/Share";
+import {
+  Login as LoginIcon,
+  StarHalf as StarHalfIcon,
+  Restaurant as RestaurantIcon,
+  GetApp as GetAppIcon,
+  Share as ShareIcon,
+} from "@mui/icons-material";
 
 const LandingPage = () => {
   const navigate = useNavigate();
