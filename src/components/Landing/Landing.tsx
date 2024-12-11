@@ -23,7 +23,7 @@ const LandingPage = () => {
           Offer expires soon. Get started now!
         </Typography>
         <Button variant="contained" color="primary" onClick={() => navigate('/login')}>
-          <LoginIcon /> Login
+          <LoginIcon sx={{ marginRight: 1 }} /> Login
         </Button>
       </Box>
 
