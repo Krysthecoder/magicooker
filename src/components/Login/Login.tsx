@@ -1,5 +1,3 @@
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import {
   Box,
   Checkbox,
@@ -7,7 +5,9 @@ import {
   Link,
   Stack,
   Button,
-} from '@mui/material/';
+  FormGroup,
+  FormControlLabel,
+} from '@mui/material';
 
 import CustomTextFieldGroup from '../CustomTextFieldGroup/CustomTextFieldGroup';
 import { LoginTextFields } from './LoginTextFieldsData';
