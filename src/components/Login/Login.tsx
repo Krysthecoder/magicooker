@@ -9,7 +9,7 @@ import {
   FormControlLabel,
 } from '@mui/material/';
 import CustomTextFieldGroup from '../CustomTextFieldGroup/CustomTextFieldGroup';
-import { LoginTextFields } from './LoginTextFieldsData';
+import { LoginTextFields } from './AuthTextFieldsData';
 
 const Login = ({ onClose }: { onClose: () => void }) => {
   const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
