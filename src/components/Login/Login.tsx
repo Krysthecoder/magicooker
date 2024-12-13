@@ -7,15 +7,13 @@ import {
   Button,
   FormGroup,
   FormControlLabel,
-} from '@mui/material';
-
+} from '@mui/material/';
 import CustomTextFieldGroup from '../CustomTextFieldGroup/CustomTextFieldGroup';
 import { LoginTextFields } from './LoginTextFieldsData';
 
-const preventDefault = (event: React.SyntheticEvent) =>
-  event.preventDefault();
+const Login = ({ onClose }: { onClose: () => void }) => {
+  const preventDefault = (event: React.SyntheticEvent) => event.preventDefault();
 
-const Login = () => {
   return (
     <Box
       component="form"
@@ -24,21 +22,17 @@ const Login = () => {
       autoComplete="off"
       onClick={preventDefault}
     >
-      <Stack
-        spacing={2}
-        direction="column"
-      >
+      <Stack spacing={2} direction="column">
         <Typography variant="h5">Sign In</Typography>
-        {LoginTextFields.map((textField) => {
-          return <CustomTextFieldGroup {...textField} />;
-        })}
+        {LoginTextFields.map((textField) => (
+          <CustomTextFieldGroup {...textField} />
+        ))}
         <FormGroup>
-          <FormControlLabel
-            control={<Checkbox />}
-            label="Remember Me"
-          />
+          <FormControlLabel control={<Checkbox />} label="Remember Me" />
         </FormGroup>
-        <Button variant="contained">Submit</Button>
+        <Button variant="contained" onClick={onClose}>
+          Submit
+        </Button>
         <Link variant="body2" href="#">
           Forgot password?
         </Link>
