@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -6,8 +7,9 @@ import {
   CardMedia,
   CardContent,
   Grid,
+  Modal
 } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+
 import {
   Login as LoginIcon,
   StarHalf as StarHalfIcon,
@@ -15,9 +17,13 @@ import {
   GetApp as GetAppIcon,
   Share as ShareIcon,
 } from "@mui/icons-material";
+import Login from "../Login/Login";
 
 const LandingPage = () => {
-  const navigate = useNavigate();
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const recipes = [
     {
@@ -61,11 +67,29 @@ const LandingPage = () => {
         <Button
           variant="contained"
           color="primary"
-          onClick={() => navigate("/login")}
+          onClick={handleOpen}
         >
           <LoginIcon sx={{ marginRight: 1 }} /> Login
         </Button>
       </Box>
+
+      {/* Login Modal */}
+      <Modal open={open} onClose={handleClose}>
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            bgcolor: 'background.paper',
+            p: 4,
+            boxShadow: 24,
+            borderRadius: 2,
+          }}
+        >
+          <Login onClose={handleClose} />
+        </Box>
+      </Modal>
 
       <Typography variant="h4" sx={{ marginY: 4 }}>
         Recipes for any occasion
