@@ -6,8 +6,7 @@ import {
   Card,
   CardMedia,
   CardContent,
-  Grid,
-  Modal
+  Grid
 } from "@mui/material";
 
 import {
@@ -73,23 +72,8 @@ const LandingPage = () => {
         </Button>
       </Box>
 
-      {/* Login Modal */}
-      <Modal open={open} onClose={handleClose}>
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            bgcolor: 'background.paper',
-            p: 4,
-            boxShadow: 24,
-            borderRadius: 2,
-          }}
-        >
-          <Login onClose={handleClose} />
-        </Box>
-      </Modal>
+      {/* Sign-in / Sign-up Modal */}
+      {open && <Login onClose={handleClose} open={open} />}
 
       <Typography variant="h4" sx={{ marginY: 4 }}>
         Recipes for any occasion
