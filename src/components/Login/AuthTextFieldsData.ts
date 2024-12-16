@@ -15,38 +15,33 @@ export const LoginTextFields = [
 
 export const SignUpTextFields = [
   {
-  id: "firstName",
+  id: "outline-firstName",
   label: "First Name",
+  variant: 'outlined',
   type: "text",
-  placeholder: "Enter your first name",
-  required: true,
   },
   {
-  id: "lastName",
+  id: "outline-lastName",
   label: "Last Name",
+  variant: 'outlined',
   type: "text",
-  placeholder: "Enter your last name",
-  required: true,
   },
   {
-  id: "email",
+  id: "outline-email",
   label: "Email",
+  variant: 'outlined',
   type: "email",
-  placeholder: "Enter your email address",
-  required: true,
   },
   {
-  id: "password",
+  id: "outline-pwd",
   label: "Password",
+  variant: 'outlined',
   type: "password",
-  placeholder: "Create a password",
-  required: true,
   },
   {
-  id: "confirmPassword",
+  id: "outline-confirmPwd",
   label: "Confirm Password",
+  variant: 'outlined',
   type: "password",
-  placeholder: "Re-enter your password",
-  required: true,
   },
   ];
