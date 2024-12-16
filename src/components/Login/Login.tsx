@@ -13,12 +13,12 @@ import {
 import CustomTextFieldGroup from '../CustomTextFieldGroup/CustomTextFieldGroup';
 import { LoginTextFields, SignUpTextFields } from './AuthTextFieldsData';
 
-interface AuthModalProps {
+interface Props {
   onClose: () => void;
   open: boolean;
 }
 
-const Login = ({ onClose, open }: AuthModalProps) => {
+const Login: React.FC<Props> = ({ onClose, open }) => {
 
   const [isSignUp, setIsSignUp] = useState(false);
   const handleToggle = () => setIsSignUp((prev) => !prev);
