@@ -73,7 +73,7 @@ const LandingPage = () => {
       </Box>
 
       {/* Sign-in / Sign-up Modal */}
-      {open && <Login onClose={handleClose} open={open} />}
+      <Login onClose={handleClose} open={open} />
 
       <Typography variant="h4" sx={{ marginY: 4 }}>
         Recipes for any occasion
