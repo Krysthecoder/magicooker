@@ -20,9 +20,9 @@ import Login from "../Login/Login";
 
 const LandingPage = () => {
 
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const handleOpen = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
 
   const recipes = [
     {
@@ -73,7 +73,7 @@ const LandingPage = () => {
       </Box>
 
       {/* Sign-in / Sign-up Modal */}
-      <Login onClose={handleClose} open={open} />
+      <Login onClose={handleClose} open={isOpen} />
 
       <Typography variant="h4" sx={{ marginY: 4 }}>
         Recipes for any occasion
