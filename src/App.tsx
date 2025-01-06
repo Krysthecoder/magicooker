@@ -14,7 +14,6 @@ import {
 export default function HomeChef() {
   return (
     <div>
-      {/* Navbar */}
       <AppBar position="static" color="transparent" elevation={0}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Typography variant="h6" component="div">
@@ -29,7 +28,6 @@ export default function HomeChef() {
         </Toolbar>
       </AppBar>
 
-      {/* Hero Section */}
       <Box
         sx={{
           position: "relative",
@@ -46,7 +44,6 @@ export default function HomeChef() {
           padding: 2,
         }}
       >
-        {/* Overlay */}
         <Box
           sx={{
             position: "absolute",
@@ -54,11 +51,10 @@ export default function HomeChef() {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark overlay
+            backgroundColor: "rgba(0, 0, 0, 0.5)", 
             zIndex: 1,
           }}
         />
-        {/* Text Content */}
         <Box sx={{ position: "relative", zIndex: 2 }}>
           <Typography variant="h3" fontWeight="bold">
             Enjoy $90 off your first box
@@ -72,7 +68,6 @@ export default function HomeChef() {
         </Box>
       </Box>
 
-      {/* Recipes Section */}
       <Container sx={{ marginTop: 4 }}>
         <Typography variant="h5" fontWeight="bold" sx={{ mb: 2 }}>
           Recipes for any occasion
@@ -122,7 +117,6 @@ export default function HomeChef() {
         </Grid>
       </Container>
 
-      {/* Why Customers Love HomeChef Section */}
       <Container sx={{ marginTop: 6 }}>
         <Typography variant="h5" fontWeight="bold" sx={{ mb: 2 }}>
           Why our customers love HomeChef
@@ -148,7 +142,6 @@ export default function HomeChef() {
         </Grid>
       </Container>
 
-      {/* Gallery Section */}
       <Container sx={{ marginTop: 6 }}>
         <Grid container spacing={2}>
           {[
